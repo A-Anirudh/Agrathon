@@ -1,0 +1,10 @@
+{% extends 'base_file.html' %} {% block title %}New User{% endblock title %} 
+{% block content %}
+<form method="POST">
+    {% csrf_token %} 
+    {{form}}
+    <input type="submit" value='Sign Up'>
+
+
+</form>
+{% endblock content %}

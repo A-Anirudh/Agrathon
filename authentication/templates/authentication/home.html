@@ -1,0 +1,5 @@
+{% extends 'base_file.html' %} {% block title %}Home page{% endblock title %}
+{%block content %}
+<h1>This is home page.Welcome {{request.user}} </h1>
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock content %}
