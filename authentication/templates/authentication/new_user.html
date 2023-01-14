@@ -1,7 +1,31 @@
-{% extends 'base_file.html' %} {% block title %}New User{% endblock title %} {%
-block content %}
+{% extends 'base_file.html' %} {% block title %}New User{% endblock title %}
+{%block content %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
 <form method="POST">
-  {% csrf_token %} {{form}}
+  {% csrf_token %} 
+  <label for="username">Enter your username: </label>
+  <br>
+  {{form.username}}
+  <br>
+  <label for="email">Enter your email: </label>
+  <br>
+  {{form.email}}
+  <br>
+  <label for="password">Enter your password: </label>
+  <br>
+  {{form.password}}
+  <br>
+  <label for="farmer">Farmer</label>
+  {{form.farmer}}
+  <label for="consumer">Consumer</label> 
+  {{form.consumer}}
   <input type="submit" value="Sign Up" />
 </form>
 {% endblock content %}

@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from .forms import LoginForm, NewUserForm
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
+from .models import CustomUser
 from django.contrib import messages
-
-
 
 def login(request):
     if request.user.is_authenticated:
@@ -38,9 +37,14 @@ def home(request):
 def new_user(request):
     form = NewUserForm(request.POST)
     if form.is_valid():
-        user = User.objects.create_user(request.POST['username'], request.POST['email'], request.POST['password'])
-        user.save()
-        return redirect('login')
+        username = request.POST['username']
+        if CustomUser.objects.filter(username=username).exists():
+            messages.add_message(request, messages.WARNING, 'User exists')
+            return render(request, 'authentication/new_user.html', {'form': form})
+        else:
+            user = CustomUser.objects.create_user(request.POST['username'], request.POST['email'], request.POST['password'])
+            user.save()
+            return redirect('login')
     return render(request, 'authentication/new_user.html', {'form': form})
 
 
