@@ -5,9 +5,12 @@ class LoginForm(forms.Form):
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
 
 class NewUserForm(forms.Form):
+    USER_TYPE_CHOICES = (
+    (1, 'Farmer'),
+    (2, 'Consumer'),
+    )
 
     username = forms.CharField(label='Username', max_length=100)
     email = forms.EmailField(label='Email')
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
-    farmer = forms.BooleanField(label='Farmer')
-    consumer = forms.BooleanField(label='consumer')
+    user_type = forms.ChoiceField(choices=USER_TYPE_CHOICES)
