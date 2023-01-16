@@ -7,7 +7,7 @@ class Farmer(models.Model):
     city = models.CharField(max_length=50)
     
     def __str__(self):
-        return self.name
+        return self.name.username
 class Crop(models.Model):
     farmer_name = models.ForeignKey(Farmer, on_delete=models.CASCADE)
     crop_name = models.CharField(max_length=50)
@@ -24,7 +24,7 @@ class Customer(models.Model):
     email = models.EmailField(max_length=254)
     city = models.CharField(max_length=50)
     def __str__(self):
-        return self.name
+        return self.name.username
 
 
 class Order(models.Model):

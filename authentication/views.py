@@ -8,6 +8,8 @@ from django.contrib import messages
 ##################
 
 # from django.utils.datastructures import MultiValueDictKeyError
+# Import for Customer and Farmer models
+from sales.models import Customer, Farmer
 
 
 def login(request):
@@ -59,6 +61,17 @@ def new_user(request):
             #     is_consumer = False
             user = CustomUser.objects.create_user(request.POST['username'], email=request.POST['email'], password=request.POST['password'],user_type = request.POST["user_type"])
             user.save()
+
+            print(type(request.POST['user_type']))
+            # Filling either customer or Farmer model depending on the user's choice
+            if (request.POST['user_type']) == '1':
+                print("Farmer being saved!!")
+                farmer = Farmer.objects.create(name=user,phone_number=request.POST['phone_number'],email=request.POST['email'],city=request.POST['city'])
+                farmer.save()
+            else:
+                customer = Customer.objects.create(name=user,phone_number=request.POST['phone_number'],email=request.POST['email'],city=request.POST['city'])
+                customer.save()
+
             return redirect('login')
     return render(request, 'authentication/new_user.html', {'form': form})
 

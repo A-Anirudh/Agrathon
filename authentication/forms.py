@@ -13,4 +13,6 @@ class NewUserForm(forms.Form):
     username = forms.CharField(label='Username', max_length=100)
     email = forms.EmailField(label='Email')
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
+    phone_number = forms.IntegerField()
+    city = forms.CharField()
     user_type = forms.ChoiceField(choices=USER_TYPE_CHOICES)
