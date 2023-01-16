@@ -39,7 +39,7 @@ def login(request):
 def home(request):
     if not request.user.is_authenticated:
         return redirect('login')
-    return render(request, 'authentication/home.html')
+    return render(request, 'home/home.html')
 
 def new_user(request):
     if request.user.is_authenticated:

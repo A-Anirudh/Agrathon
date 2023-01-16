@@ -1,0 +1,12 @@
+{% extends 'sales/base_file.html' %} {% block title %} Product detail page 
+{% endblock title %} {%block content %}
+<h1>Product detail page</h1>
+
+{% if product %}
+{{product}}
+
+{% else %}
+<p>Error from our side.. Will fix it soon!</p>
+{% endif %}
+
+{% endblock content %}

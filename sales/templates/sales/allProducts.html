@@ -1,0 +1,14 @@
+{% extends 'sales/base_file.html' %} {% block title %} All products page 
+{% endblock title %} {%block content %}
+<h1>Products page</h1>
+{% for product in products  %}
+<div style="margin:20px; border: 2px red solid; padding:20px">
+    <a href="{% url 'productDetail' product.id %}"><h1>{{product.crop_name}}</h1></a>
+   <p>By: {{product.farmer_name}}</p>
+   <p>Stock : {{product.stock}}</p>
+   <p>Price : {{product.cost}} INR per Kg</p>
+</div>
+
+
+{% endfor %}
+{% endblock content %}
