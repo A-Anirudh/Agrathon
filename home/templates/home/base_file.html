@@ -12,12 +12,13 @@
 
 </head>
 <body>
-    <section class="header" >
-        <nav>
+  <nav>
             <a href="{% url 'home' %}">LOGO</a>
             <input type="button" class="loginButton" value="Login">
             {% comment %} <a href="{% url 'login' %} " class='loginButton'>Login</a> {% endcomment %}
         </nav>
+    <section class="header" >
+        
 
         
         {% block content %}{% endblock content %}
