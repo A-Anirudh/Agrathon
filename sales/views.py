@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django.http import HttpResponse
-
 from django.core.exceptions import ObjectDoesNotExist
 
 
@@ -25,3 +24,9 @@ def productDetail(request,pk):
 
     return render(request, 'sales/productDetail.html',context)
  
+# All orders page
+
+def allOrders(request):
+    print(request.user)
+    orders = Order.objects.all()
+    return render(request, 'sales/allOrders.html')

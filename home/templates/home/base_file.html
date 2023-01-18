@@ -16,11 +16,14 @@
         <nav>
             <a href="{% url 'home' %}">LOGO</a>
             <input type="button" class="loginButton" value="Login">
+            {% comment %} <a href="{% url 'login' %} " class='loginButton'>Login</a> {% endcomment %}
         </nav>
 
+        
         {% block content %}{% endblock content %}
-
     </section>
+
+
     
 </body>
 </html>
