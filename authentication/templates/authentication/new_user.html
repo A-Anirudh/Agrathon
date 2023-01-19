@@ -10,32 +10,65 @@
 {% endif %}
 <form method="POST">
   {% csrf_token %} 
-  <label for="username">Enter your username: </label>
-  <br>
-  {{form.username}}
-  <br>
-  <label for="email">Enter your email: </label>
-  <br>
-  {{form.email}}
-  <br>
+    <div class="container">
 
-  <label for="phone_number">Enter your phone number</label>
-  <br>
-  {{form.phone_number}}
-  <br>
 
-  <label for="city">Enter City</label>
-  <br>
-  {{form.city}}
-  <br>
+        <div class="imagediv">
+            <img src="regis_bg.png">
+            <div class="newTextFlex">
+                <p class="ohh">Ohh</p>
+                <h1>New Here?</h1>
+            </div>
+        </div>
 
-   <label for="password">Enter your password: </label>
-  <br>
-  {{form.password}}
-  <br>
-  {{form.user_type}}
-  <br>
+        <div class="entryFlex">
+            <div>
+                <h2>Sign Up</h2>
+            </div>
+            <div class="email">
+                <p>Email</p>
+                {% comment %} <input type="text" class="textbox"> {% endcomment %}
+                {{ form.email }}
+            </div>
 
-  <input type="submit" value="Sign Up" />
+            <div class="name">
+                <p>Full Name</p>
+                {% comment %} <input type="text" class="textbox"> {% endcomment %}
+                {{ form.username }}
+            </div>
+
+            <div class="number">
+                <p>Mobile Number</p>
+                {% comment %} <input type="text" class="textbox"> {% endcomment %}
+                {{ form.phone_number }}
+            </div>
+
+            <div class="Location">
+                <p>Location</p>
+                {% comment %} <input type="text" class="textbox"> {% endcomment %}
+                {{ form.city }}
+            </div>
+
+            <div class="password">
+                <p>Password</p>
+                {% comment %} <input type="text" class="textbox"> {% endcomment %}
+                {{ form.city }}
+            </div>
+
+            <div class="radio">
+
+                  {% comment %} <div> <input type="radio" name="type" value="farmer"> <label>Farmer</label></div>
+                  <div> <input type="radio" name="type" value="consumer"><label>Consumer</label></div> {% endcomment %}
+
+                  {{ form.user_type }}
+
+            </div>
+            {% comment %} <div class="signupButton" ><a href="login.html" class="signUp">Sign Up</a></div> {% endcomment %}
+            <input class="signupButton" type="submit" value="Login">
+        </div>
+
+    </div>
+
+
 </form>
 {% endblock content %}
