@@ -10,7 +10,11 @@ body {
     background: #FFE08C;
 }
 
+<<<<<<< HEAD
 .container {
+=======
+.main_container {
+>>>>>>> d061dfa0c3b4b1cc331a676d8757aa20ee05157c
     position: relative;
     top: 50%;
     left: 50%;
@@ -204,4 +208,8 @@ h2 {
 
     background: #FFCD46;
     border-radius: 55px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d061dfa0c3b4b1cc331a676d8757aa20ee05157c
