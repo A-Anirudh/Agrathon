@@ -3,14 +3,9 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     position: relative;
-
-
-
-
 }
 
 body {
-
     overflow: hidden;
     background: #FFE08C;
 }
@@ -74,7 +69,7 @@ body {
 }
 
 
-.hiflex{
+.hiflex {
     /* background-color: #c6aeff; */
     top: 35%;
     left: 20%;
@@ -184,26 +179,29 @@ h2 {
     text-decoration: none;
 }
 
-.box1{
+.box1 {
 
     position: absolute;
-    top:10%;
+    top: 10%;
     right: 100%;
-width: 23%;
-height: 44%;
-top:8%;
-left: 24%;;
-background: #518B10;
-border-radius: 55px;
+    width: 23%;
+    height: 44%;
+    top: 8%;
+    left: 24%;
+    ;
+    background: #518B10;
+    border-radius: 55px;
 
 }
-.box2{
+
+.box2 {
     position: absolute;
     width: 23%;
     height: 44%;
-top:48%;
-left: 53%;;
+    top: 48%;
+    left: 53%;
+    ;
 
-background: #FFCD46;
-border-radius: 55px;
+    background: #FFCD46;
+    border-radius: 55px;
 }

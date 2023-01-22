@@ -14,13 +14,10 @@
 <body>
   <nav>
             <a href="{% url 'home' %}">LOGO</a>
-            <input type="button" class="loginButton" value="Login">
-            {% comment %} <a href="{% url 'login' %} " class='loginButton'>Login</a> {% endcomment %}
+            {% comment %} <input type="button" class="loginButton" value="Login"> {% endcomment %}
+            <a href="{% url 'login' %} " class='loginButton'>Login</a>
         </nav>
     <section class="header" >
-        
-
-        
         {% block content %}{% endblock content %}
     </section>
 

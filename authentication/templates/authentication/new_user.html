@@ -1,5 +1,7 @@
-{% extends 'home/base_file.html' %} {% block title %}New User{% endblock title %}
+{% extends 'base_file.html' %}
+{% block title %}New User{% endblock title %}
 {%block content %}
+{% load static %}
 
 {% if messages %}
 <ul class="messages">
@@ -9,66 +11,34 @@
 </ul>
 {% endif %}
 <form method="POST">
-  {% csrf_token %} 
-    <div class="container">
+  {% csrf_token %}
+          <div class="container">
+            <h1>Sign Up</h1>
+            <label for="email"><b>Email</b></label>
+            {% comment %} <input type="text" placeholder="Enter Email"  id="email" name="email" required> {% endcomment %}
+            {{ form.email }}
 
+            <label for="name"><b>Name</b></label>
+            {% comment %} <input type="text" placeholder="Enter full name"  id="name" name="username" required> {% endcomment %}
+            {{ form.username }}
 
-        <div class="imagediv">
-            <img src="regis_bg.png">
-            <div class="newTextFlex">
-                <p class="ohh">Ohh</p>
-                <h1>New Here?</h1>
-            </div>
+            <label for="number"><b>Mobile Number</b></label>
+            {% comment %} <input type="text" placeholder="Enter mobile number"  id="number" name="phone_number" required> {% endcomment %}
+            {{ form.phone_number }}
+
+            <label for="location"><b>Location</b></label>
+            {% comment %} <input type="text" placeholder="Enter location"  id="location" name="city" required> {% endcomment %}
+            {{form.city}}
+
+            <label for="pwd"><b>Password</b></label>
+            {% comment %} <input type="password" placeholder="Enter passowrd"  id="pwd" name="password" required> {% endcomment %}
+            {{form.password}}
+
+            {{form.user_type}}
+
+            <!-- <div><button type="submit" class="registerbtn">Register</button></div> -->
+            <input class="registerbtn" type="submit" value="Register">
         </div>
-
-        <div class="entryFlex">
-            <div>
-                <h2>Sign Up</h2>
-            </div>
-            <div class="email">
-                <p>Email</p>
-                {% comment %} <input type="text" class="textbox"> {% endcomment %}
-                {{ form.email }}
-            </div>
-
-            <div class="name">
-                <p>Full Name</p>
-                {% comment %} <input type="text" class="textbox"> {% endcomment %}
-                {{ form.username }}
-            </div>
-
-            <div class="number">
-                <p>Mobile Number</p>
-                {% comment %} <input type="text" class="textbox"> {% endcomment %}
-                {{ form.phone_number }}
-            </div>
-
-            <div class="Location">
-                <p>Location</p>
-                {% comment %} <input type="text" class="textbox"> {% endcomment %}
-                {{ form.city }}
-            </div>
-
-            <div class="password">
-                <p>Password</p>
-                {% comment %} <input type="text" class="textbox"> {% endcomment %}
-                {{ form.city }}
-            </div>
-
-            <div class="radio">
-
-                  {% comment %} <div> <input type="radio" name="type" value="farmer"> <label>Farmer</label></div>
-                  <div> <input type="radio" name="type" value="consumer"><label>Consumer</label></div> {% endcomment %}
-
-                  {{ form.user_type }}
-
-            </div>
-            {% comment %} <div class="signupButton" ><a href="login.html" class="signUp">Sign Up</a></div> {% endcomment %}
-            <input class="signupButton" type="submit" value="Login">
-        </div>
-
-    </div>
-
 
 </form>
 {% endblock content %}

@@ -19,4 +19,3 @@ def get_lat_and_lon(username,user_type="consumer"):
     except ObjectDoesNotExist:
         print("User not found")
         return -1
-

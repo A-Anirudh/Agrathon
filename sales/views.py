@@ -17,22 +17,26 @@ def allProducts(request):
         return redirect('login')
     username = request.user
     user = CustomUser.objects.get(username=username)
-    lat_consumer,lon_consumer = get_lat_and_lon(user)
-    # print(lat,lon)
+    if user.user_type == 'consumer':
+        lat_consumer,lon_consumer = get_lat_and_lon(user)
 
-    all_farmers = list(Farmer.objects.all())
-    l = []
-    for i in all_farmers:
-        lat_farmer,lon_farmer = get_lat_and_lon(i.name,user_type='farmer')
-        distance = geodesic((lat_consumer,lon_consumer),(lat_farmer,lon_farmer)).km
-        # print(type(distance))
-        if distance<200:
-            l.append(i)
-    print(l)
-    p = []
-    for i in range(len(l)):
-        p.append(Crop.objects.get(farmer_name=l[i]))
-    # products = Crop.objects.all()
+        # print(lat,lon)
+
+        all_farmers = list(Farmer.objects.all())
+        l = []
+        for i in all_farmers:
+            lat_farmer,lon_farmer = get_lat_and_lon(i.name,user_type='farmer')
+            distance = geodesic((lat_consumer,lon_consumer),(lat_farmer,lon_farmer)).km
+            # print(type(distance))
+            if distance<200:
+                l.append(i)
+        print(l)
+        p = []
+        for i in range(len(l)):
+            p.append(Crop.objects.get(farmer_name=l[i]))
+        # products = Crop.objects.all()
+    else:
+        p=[]
     return render(request,'sales/allProducts.html',context={'products':p})
 
 def productDetail(request,pk):

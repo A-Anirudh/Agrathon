@@ -59,6 +59,7 @@ def new_user(request):
             # except MultiValueDictKeyError:
             #     is_farmer = False
             #     is_consumer = False
+            print(request.POST['username'])
             user = CustomUser.objects.create_user(request.POST['username'], email=request.POST['email'], password=request.POST['password'],user_type = request.POST["user_type"])
             user.save()
 
