@@ -10,16 +10,19 @@ header {
   align-items: center;
   padding: .4% 10%;
 
-  }
+}
+
 .logo {
   /*position: relative;*/
   width: 10vh;
   height: 5vh;
 }
+
 .nav__links {
   list-style: none;
   display: flex;
 }
+
 .nav__links a {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -27,17 +30,21 @@ header {
   color: #000000;
   text-decoration: none;
 }
+
 .nav__links li {
   padding: 0px 20px;
 }
+
 .nav__links li a {
   transition: all 0.3s ease 0s;
 }
+
 .nav__links li a:hover {
   box-sizing: border-box;
   background: #dbf76b;
 }
-#Search_box{
+
+#Search_box {
   box-sizing: border-box;
   width: 100vh;
   height: 5vh;
@@ -53,29 +60,33 @@ header {
   /* identical to box height */
   text-align: center;
 }
-.s_icon{
+
+.s_icon {
   width: 5vh;
   height: 5vh;
 }
-.prof{   
-  position: relative; 
+
+.prof {
+  position: relative;
   width: 5vh;
   height: 5vh;
   align-self: flex-end;
   border: 0;
 }
 
-.searchflex{
-display: flex;
-justify-content: space-evenly;
+.searchflex {
+  display: flex;
+  justify-content: space-evenly;
 }
-.cart{
+
+.cart {
   position: relative;
-  display:inline;
+  display: inline;
   width: 3vh;
   height: 3vh;
 }
-.c{
+
+.c {
   display: flex;
   align-content: center;
 }

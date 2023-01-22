@@ -1,12 +1,50 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}{% endblock title %}</title>
-  </head>
-  <body>
-    {% block content %}{% endblock content %}
-  </body>
+  {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'login.css' %}"> {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+</head>
+<body>
+    {% if user_type == 2 %}
+    
+        <header>
+            <div><a href="home.html" > <img class= "logo" src="images/f2c.jpg" alt="F2C"></a> </div>
+                <div class="searchflex">
+                    <input type="Search" placeholder="Search for products and more" id="Search_box">
+                    <a href="#"><img class="s_icon" src="images/magnifying-glass.png"></a>
+                </div>         
+            <nav>
+                <ul class="nav__links">
+                    <li class="home"><a href="home.html">Home</a></li>
+                    <li><div class="c"><div><a href="cart.html"><img src="images/cart.png" class="cart"></div><div>Cart</div></div></li></a>
+                    <li><a href="myordes.html">My Orders</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="#" id="p_icon"> <button type="Profile"> <img class="prof" src="images/user.png"alt="Profile" border="0" /></button></a>
+            </div>
+        </header>
+        <hr style="width:100%";text-align:left;margin-left:0>
+
+    
+    {% endif %}
+  <nav>
+            <a href="{% url 'home' %}">LOGO</a>
+            {% comment %} <input type="button" class="loginButton" value="Login"> {% endcomment %}
+            <a href="{% url 'login' %} " class='loginButton'>Login</a>
+        </nav>
+    <section class="header" >
+        {% block content %}{% endblock content %}
+    </section>
+
+    
+</body>
 </html>

@@ -37,9 +37,15 @@ def login(request):
     return render(request, 'authentication/login.html',context)
 
 def home(request):
-    if not request.user.is_authenticated:
-        return redirect('login')
-    return render(request, 'home/home.html')
+    username = request.user
+
+    if request.user.is_authenticated:
+        user = CustomUser.objects.get(username=username)
+        context={"user_type":user.user_type}
+        print(user.user_type)
+    else:
+        context={}
+    return render(request, 'home/home.html',context)
 
 def new_user(request):
     if request.user.is_authenticated:

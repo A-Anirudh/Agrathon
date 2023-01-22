@@ -25,8 +25,8 @@ nav {
 
     padding: 10px 10px;
     min-width: 10.25%;
-     
-    
+
+
     background-color: rgba(125, 128, 7, 0.36);
     border-radius: 26.5px;
 
@@ -35,8 +35,8 @@ nav {
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    
-    
+
+
     border-width: 0;
 
     text-align: center;
@@ -136,4 +136,99 @@ nav {
 .readmoreButton:hover {
     background-color: rgb(255, 145, 0);
     transition: top 0.09s ease-in;
+}
+
+
+/* Navbar consumer .css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .4% 10%;
+
+}
+
+.logo {
+    /*position: relative;*/
+    width: 10vh;
+    height: 5vh;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+
+.nav__links a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 2vh;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav__links li {
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    box-sizing: border-box;
+    background: #dbf76b;
+}
+
+#Search_box {
+    box-sizing: border-box;
+    width: 100vh;
+    height: 5vh;
+    left: 261px;
+    top: 27px;
+
+    font-size: 2vh;
+    line-height: 100%;
+
+    background: #E0DEDE;
+    border: .3px solid #000000;
+    border-radius: 35px;
+    /* identical to box height */
+    text-align: center;
+}
+
+.s_icon {
+    width: 5vh;
+    height: 5vh;
+}
+
+.prof {
+    position: relative;
+    width: 5vh;
+    height: 5vh;
+    align-self: flex-end;
+    border: 0;
+}
+
+.searchflex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart {
+    position: relative;
+    display: inline;
+    width: 3vh;
+    height: 3vh;
+}
+
+.c {
+    display: flex;
+    align-content: center;
 }

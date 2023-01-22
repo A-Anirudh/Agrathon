@@ -9,7 +9,7 @@
 
 <form method="POST">
   {% csrf_token %}
-    <label for="username">Enter your username</label>
+    {% comment %} <label for="username">Enter your username</label>
     <div>
     <br>
   {{form.username}}
@@ -24,6 +24,43 @@
     {{form.password}}
   </div>
   <br>
-  <input type="submit" value="Login" />
+  <input type="submit" value="Login" /> {% endcomment %}
+
+  
+<div class="box1"></div>
+<div class="box2"></div>
+    <div class="container">
+
+
+        
+        <div class="imageBox" >
+            <img src="login_image_upscaled.png">
+            <div class="hiflex">
+            <p class="hey">Hey!</p>
+           <h1>Welcome</h1>
+        </div>
+        </div>
+
+
+        <div class="content">
+
+            <div><h2>Login</h2></div>
+
+            <div class='entryFlex'>
+
+            <div class="entry">
+                <p>Username/Email</p>
+                <input type="text" class="textbox"></div>
+            
+            <div class="entry_2"><p>Password</p>
+            <input type="text" class="textbox"></div>
+    </div>
+            
+       <div class="loginButton" ><a href="home.html" class="login">Login</a></div>
+        <a href="forgot_password.html" class="forgotpwd">Forgot Password</a>
+ 
+        <a href="register.html" class="register">New User?Create account</a>
+        </div>
+    </div>
 </form>
 <a href="{% url 'new_user' %}">New User? Sign up</a>
