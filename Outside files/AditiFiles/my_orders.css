@@ -1,0 +1,326 @@
+.a {
+    position: absolute;
+    width: 1231px;
+    height: 178px;
+    left: 80px;
+    top: 100px;
+    border: 1px solid #000000;
+    border-radius: 35px;
+}
+
+.a img {
+    position: absolute;
+    width: 253px;
+    height: 135px;
+    left: 40px;
+    top: 10px;
+    border-radius: 50px;
+}
+
+.a p.b {
+    position: absolute;
+    width: 128px;
+    height: 30px;
+    left: 448px;
+    top: 23px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.a p.c {
+    position: absolute;
+    width: 144px;
+    height: 30px;
+    left: 448px;
+    top: 60px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a p.d {
+    position: absolute;
+    width: 250px;
+    height: 24px;
+    left: 700px;
+    top: 35px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a p.e {
+    position: absolute;
+    width: 262px;
+    height: 24px;
+    left: 700px;
+    top: 75px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a p.f {
+    position: absolute;
+    width: 284px;
+    height: 20px;
+    left: 700px;
+    top: 120px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a button {
+    position: absolute;
+    width: 148.91px;
+    height: 43px;
+    right: 15px;
+    top: 104px;
+    background: #CEF046;
+    border-radius: 27.8704px;
+}
+
+.a1 {
+    position: absolute;
+    width: 1231px;
+    height: 178px;
+    left: 80px;
+    top: 300px;
+    border: 1px solid #000000;
+    border-radius: 35px;
+}
+
+.a1 img {
+    position: absolute;
+    width: 253px;
+    height: 135px;
+    left: 40px;
+    top: 17px;
+    border-radius: 50px;
+}
+
+.a1 p.b1 {
+    position: absolute;
+    width: 128px;
+    height: 30px;
+    left: 448px;
+    top: 23px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.a1 p.c1 {
+    position: absolute;
+    width: 144px;
+    height: 30px;
+    left: 448px;
+    top: 63px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a1 p.d1 {
+    position: absolute;
+    width: 250px;
+    height: 24px;
+    left: 700px;
+    top: 40px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a1 p.e1 {
+    position: absolute;
+    width: 262px;
+    height: 24px;
+    left: 700px;
+    top: 65px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a1 p.f1 {
+    position: absolute;
+    width: 284px;
+    height: 20px;
+    left: 700px;
+    top: 110px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a1 button {
+    position: absolute;
+    width: 148.91px;
+    height: 43px;
+    right: 15px;
+    top: 104px;
+    background: #CEF046;
+    border-radius: 27.8704px;
+}
+
+.a2 {
+    position: absolute;
+    width: 1231px;
+    height: 178px;
+    left: 80px;
+    top: 500px;
+    border: 1px solid #000000;
+    border-radius: 35px;
+}
+
+.a2 img {
+    position: absolute;
+    width: 239.36px;
+    height: 135px;
+    left: 40px;
+    top: 25px;
+    border-radius: 50px;
+}
+
+.a2 p.b2 {
+    position: absolute;
+    width: 128px;
+    height: 30px;
+    left: 448px;
+    top: 23px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.a2 p.c2 {
+    position: absolute;
+    width: 144px;
+    height: 30px;
+    left: 448px;
+    top: 63px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a2 p.d2 {
+    position: absolute;
+    width: 250px;
+    height: 24px;
+    left: 700px;
+    top: 40px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a2 p.e2 {
+    position: absolute;
+    width: 262px;
+    height: 24px;
+    left: 700px;
+    top: 65px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a2 p.f2 {
+    position: absolute;
+    width: 284px;
+    height: 20px;
+    left: 700px;
+    top: 110px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.a2 button {
+    position: absolute;
+    width: 148.91px;
+    height: 43px;
+    right: 15px;
+    top: 104px;
+    background: #CEF046;
+    border-radius: 27.8704px;
+}

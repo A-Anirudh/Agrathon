@@ -55,4 +55,5 @@ def productDetail(request,pk):
 def allOrders(request):
     # print(request.user)
     orders = Order.objects.all()
-    return render(request, 'sales/allOrders.html')
+    context = {'orders':orders}
+    return render(request, 'sales/allOrders.html',context)
