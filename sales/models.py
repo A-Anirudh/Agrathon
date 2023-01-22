@@ -13,8 +13,9 @@ class Crop(models.Model):
     crop_name = models.CharField(max_length=50)
     stock = models.IntegerField()
     cost = models.IntegerField()
-    # desc = models.TextField()
+    desc = models.TextField(blank=True, null=True)
     # Image Field add here
+    image = models.ImageField(upload_to='crop_images/')
     def __str__(self):
         return f"{self.crop_name} from {self.farmer_name.name}"
 
