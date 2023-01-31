@@ -5,6 +5,9 @@ urlpatterns = [
     path('', home, name='home'),
     path('products/', allProducts, name='allProducts'),
     path('products/<int:pk>',productDetail, name='productDetail'),
-    # Orders
-    path("orders",allOrders,name="allOrders")
+    # Orders for consumer
+    path('myOrders/',myOrders, name='myOrders'),
+
+    #Farmer products
+    path('myProducts',myProducts,name='myProducts'),
 ]

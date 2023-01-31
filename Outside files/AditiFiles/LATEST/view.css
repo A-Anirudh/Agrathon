@@ -1,0 +1,427 @@
+.a img {
+    position: absolute;
+    width: 360px;
+    height: 295px;
+    left: 910px;
+    top: 138px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 35px;
+}
+
+.a h1 {
+    position: absolute;
+    width: 370px;
+    height: 39px;
+    left: 180px;
+    top: 118px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-transform: uppercase;
+}
+
+.a p.b {
+    position: absolute;
+    height: 24px;
+    left: 180px;
+    top: 190px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a p.c {
+    position: absolute;
+    height: 24px;
+    left: 370px;
+    top: 190px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a p.d {
+    position: absolute;
+    height: 24px;
+    left: 180px;
+    top: 235px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a p.e {
+    position: absolute;
+    height: 24px;
+    left: 370px;
+    top: 235px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a p.f {
+    position: absolute;
+    height: 24px;
+    left: 180px;
+    top: 280px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a p.g {
+    position: absolute;
+    height: 24px;
+    left: 370px;
+    top: 280px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a h2 {
+    position: absolute;
+    width: 349px;
+    height: 39px;
+    left: 180px;
+    top: 330px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 39px;
+    text-transform: uppercase;
+}
+
+.a h3 {
+    position: absolute;
+    height: 24px;
+    left: 180px;
+    top: 385px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a p.h {
+    position: absolute;
+    height: 24px;
+    left: 180px;
+    top: 435px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a p.i {
+    position: absolute;
+    height: 24px;
+    left: 180px;
+    top: 535px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a p.j {
+    position: absolute;
+    height: 24px;
+    left: 210px;
+    top: 555px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a p.k {
+    position: absolute;
+    height: 24px;
+    left: 180px;
+    top: 600px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a p.l {
+    position: absolute;
+    height: 24px;
+    left: 210px;
+    top: 625px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a3 p.b3 {
+    position: absolute;
+    width: 287px;
+    height: 116px;
+    left: 928px;
+    top: 449px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
+    text-transform: uppercase;
+}
+
+.a3 p.c3 {
+    position: absolute;
+    width: 287px;
+    height: 116px;
+    left: 928px;
+    top: 475px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
+    text-transform: uppercase;
+}
+
+.a3 p.d3 {
+    position: absolute;
+    width: 287px;
+    height: 116px;
+    left: 928px;
+    top: 500px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
+    text-transform: uppercase;
+}
+
+.a1 ul.b1 li.c1 {
+    position: absolute;
+    width: 211px;
+    height: 24px;
+    left: 31px;
+    top: 730px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a1 ul.b1 li.d1 {
+    position: absolute;
+    width: 155px;
+    height: 24px;
+    left: 31px;
+    top: 825px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a1 ul.b1 li.e1 {
+    position: absolute;
+    width: 93px;
+    height: 24px;
+    left: 459px;
+    top: 730px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a1 ul.b1 li.f1 {
+    position: absolute;
+    width: 160px;
+    height: 24px;
+    left: 434px;
+    top: 825px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a1 ul.b1 li.g1 {
+    position: absolute;
+    width: 200px;
+    height: 24px;
+    left: 819px;
+    top: 730px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a1 ul.b1 li.h1 {
+    position: absolute;
+    width: 137px;
+    height: 24px;
+    left: 825px;
+    top: 825px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a1 ul.b1 li.i1 {
+    position: absolute;
+    width: 119px;
+    height: 24px;
+    left: 1280px;
+    top: 730px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.a1 ul.b1 li.j1 {
+    position: absolute;
+    width: 137px;
+    height: 24px;
+    left: 1269px;
+    top: 825px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+p.a2 {
+    position: absolute;
+    width: 376px;
+    height: 24px;
+    left: 991px;
+    top: 888px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+:root{
+    --body:#8c9eff;
+    --cont:#eceff1;
+    --line:#651fff;
+    --txt:#007bfd;
+    --light:#c5cae9;
+}
+.container{
+    width: 1300px;
+    max-width: 120%;
+    padding: 40px;
+    margin: 0 30px;
+    position: relative;
+}
+#progress{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1cm;
+    position: relative;
+    text-align: center;
+}
+#progress li{
+    width: 0%;
+    position: relative;
+}
+#progress li::before{
+    content: '\2713';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    align-items: center;
+    font-size: 2rcm;
+    height: 50px;
+    background: var(--line);
+    color:#fff;
+    border-radius: 50%;
+    z-index: 111;
+    top: 680px;
+}
+#progress li:last-child::before{
+    content: '\2713';
+    font-weight: bold;
+    background: var(--line);
+}
+#progress::before{
+    content: '';
+    position: absolute;
+    top: 700px;
+    width: 100%;
+    margin-left: 35px;
+    height: 10px;
+    background: var(--line);
+    z-index: 111;
+}
+#progress::after{
+    content: '';
+    position: absolute;
+    top: 700px;
+    width: 100%;
+    height: 10px;
+    background: #c5cae9;
+}

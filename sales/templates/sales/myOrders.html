@@ -1,0 +1,28 @@
+{% extends 'sales/base_file.html' %} {% block title %} All orders page 
+{% endblock title %} {%block content %}
+
+        <div class="fcontainer">
+            {% for order in orders %}
+            <div class="a">
+                <img src="{{order.crop.image.url}}">
+                <div class="info">
+                    <div class="name">
+                        <p class="b">Name : {{order.crop.crop_name}}</p>
+                        <br>
+                        <p class="c">Rs. {{order.crop.cost}}/Kg</p>
+                    </div>
+                    <div class="detail">
+                        <p class="d">Ordered on <br>{{order.order_date}}</p>
+                        <p class="e">Delivered on <br>{{order.deliver_date}}</p>
+                        {% if order.delivered%}
+                                                <p class="f">Your item has been delivered.</p>
+                        
+                        {% endif %}
+
+                    </div>
+                    <a href="#" class="click">View Details</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endblock content %}

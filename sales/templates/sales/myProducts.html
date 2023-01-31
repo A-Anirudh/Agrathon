@@ -1,0 +1,14 @@
+{% extends 'sales/base_file.html' %}
+{% load static %}
+{% block content %}
+        <div class="gallary">
+            {% for product in products %}
+            <div class="content">
+                <a href="#"><img src="{{product.image.url}}" alt="CARROT" class="product"></a>
+                <h3><a href="#"> {{product.crop_name}}</a></h3>
+                <h2>Rs. {{product.cost}} /Kg</h2> <br>
+
+            </div>
+            {% endfor %}
+          </div>
+{% endblock content %}

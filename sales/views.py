@@ -39,6 +39,17 @@ def allProducts(request):
         p=[]
     return render(request,'sales/allProducts.html',context={'products':p})
 
+def myProducts(request):
+    user = CustomUser.objects.get(username=request.user)
+
+    if user.user_type == 1:
+        farmer_object = Farmer.objects.get(name = user)
+        products = Crop.objects.filter(farmer_name = farmer_object)
+        context = {'products':products,"user_type" :user.user_type}
+    else:
+        redirect('home')
+    return render(request, 'sales/myProducts.html',context)
+
 def productDetail(request,pk):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -52,8 +63,13 @@ def productDetail(request,pk):
  
 # All orders page
 
-def allOrders(request):
-    # print(request.user)
-    orders = Order.objects.all()
-    context = {'orders':orders}
-    return render(request, 'sales/allOrders.html',context)
+
+def myOrders(request):
+    customer = CustomUser.objects.get(username=request.user)
+    user = Customer.objects.get(name=customer)
+    orders = Order.objects.filter(customer=user)
+    for order in orders:
+        print(order.__dict__.keys())
+    # print(orders)
+    context = {'orders':orders,'user_type':customer.user_type}
+    return render(request, 'sales/myOrders.html',context)

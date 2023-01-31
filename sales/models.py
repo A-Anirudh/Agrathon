@@ -35,7 +35,10 @@ class Order(models.Model):
     crop = models.ForeignKey(Crop, on_delete=models.CASCADE)
     qty = models.IntegerField()
     # Order ID is the built in ID in django models
-    date = models.DateTimeField(auto_now=False, auto_now_add=True)
+    order_date = models.DateTimeField(auto_now=False, auto_now_add=True)
+    order_date = models.DateTimeField(auto_now=False, auto_now_add=True)
+    deliver_date = models.DateTimeField(auto_now=False, auto_now_add=True)
+    delivered = models.BooleanField(default=False)
     total_price = models.FloatField(default=0,blank=True,null=True)
 
     def __str__(self):
@@ -47,6 +50,5 @@ class Review(models.Model):
     crop = models.ForeignKey(Crop, on_delete=models.CASCADE)
     title = models.TextField()
     description = models.TextField()
-
     def __str__(self):
         return self.title
