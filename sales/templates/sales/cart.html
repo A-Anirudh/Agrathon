@@ -1,0 +1,26 @@
+    {% extends 'sales/base_file.html' %}
+
+    {% block content %}
+        <div class="gallary">
+            {% for item,product in mylist %}
+            <div class="content">
+                <a href="{% url 'productDetail' product.id %}"><img src="{{item.product.image.url}}" alt="{{item.product.image.url}}" class="product"></a>
+                <h3><a href="{% url 'productDetail' product.id %}"> {{item.product.crop_name}}</a></h3>
+                <h2>Rs. {{item.product.cost}} /Kg</h2>
+                <div class="increment">
+                    <span class="minus">-</span>
+                    <span class="num">{{item.qty}}</span>
+                    <span class="plus">+</span>
+                </div>
+                <a href="myproducts1.html" id="delete_p"><button type="delete"><img src="images/trash.png" class="delete"></button> </a>
+            </div>
+
+            {% endfor %}
+
+        </div>
+        <div class="bottom">
+            <h2> Total Rs {{ item.total_cost }}</h2>
+            <h3><a href="payment.html" id="buy">Proceed to buy</a></h3>
+        </div>
+
+        {% endblock content %}

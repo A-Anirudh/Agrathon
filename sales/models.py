@@ -52,3 +52,11 @@ class Review(models.Model):
     description = models.TextField()
     def __str__(self):
         return self.title
+
+class Cart(models.Model):
+    user = models.ForeignKey(Customer,  on_delete=models.CASCADE)
+    qty = models.IntegerField(default=1)
+    product = models.ForeignKey(Crop, on_delete=models.CASCADE)
+    total_cost = models.FloatField(default=0,blank=True,null=True)
+    def __str__(self):
+        return f"{self.user.name}'s cart"

@@ -10,4 +10,5 @@ urlpatterns = [
 
     #Farmer products
     path('myProducts',myProducts,name='myProducts'),
+    path('cart',cart,name='cart'),
 ]

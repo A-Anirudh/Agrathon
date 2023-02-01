@@ -25,18 +25,14 @@
             <p>
 {{product.desc}} </p>
         </div>
-
-
     </div>
 
-    <form class="image_box">
-
+    <form method="POST" class="image_box">
+        {% csrf_token %}
         <img class="productDetailImage" src="{{product.image.url}}">
-        
         <div class="options_flex">
-
-        <button type="submit" class="add_to_cart">Add to Cart</button>
-        <button type="submit" class="buy_now">Buy now</button>
+            {{form.qty}}
+        <input type="submit" class="add_to_cart" value='Add to Cart'>
         </div>
     </form>
 

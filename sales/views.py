@@ -6,7 +6,7 @@ import requests
 from geopy.distance import geodesic
 from .helpers import get_lat_and_lon
 from authentication.models import CustomUser
-
+from .forms import AddToCartForm
 def home(request):
     return HttpResponse("Hello world")
 
@@ -60,11 +60,18 @@ def productDetail(request,pk):
         return redirect('login')
     try:
         user = CustomUser.objects.get(username=request.user)
+        customer = Customer.objects.get(name=user)
         product = Crop.objects.get(pk=pk)
         print(f"user type: {user.user_type}")
-        context={"product":product,"user_type" :user.user_type}
+        form = AddToCartForm(request.POST)
+        if form.is_valid():
+            qty = request.POST['qty']
+            cart_item = Cart.objects.create(user = customer, product=product, qty=qty, total_cost = qty*product.cost)
+            return redirect('cart')
+        context={"product":product,"user_type" :user.user_type,"form":form}
     except ObjectDoesNotExist:
         context={}
+
 
     return render(request, 'sales/productDetail.html',context)
  
@@ -84,11 +91,23 @@ def myOrders(request):
 
 
 # All orders of a particular farmer
-
-
 def farmerOrders(request):
     user = CustomerUser.objects.get(username=request.user)
     farmer = Farmer.objects.get(farmer_name=user)
     orders = Order.objects.filter(farmer=farmer)
     return render(request,'sales/farmerOrders.html')
-    
+
+
+# Cart 
+def cart(request):
+    p = []
+    product=[]
+    user = CustomUser.objects.get(username=request.user)
+    customer = Customer.objects.get(name = user)
+    cart_items = Cart.objects.filter(user = customer)
+    for i in cart_items:
+        p.append(Crop.objects.get(crop_name=i.product.crop_name))
+
+    print(p)
+    context = {'cart':cart_items,'user_type':user.user_type,"product":p,"mylist":zip(cart_items,p) }
+    return render(request, 'sales/cart.html',context)
