@@ -73,10 +73,12 @@ def myOrders(request):
     customer = CustomUser.objects.get(username=request.user)
     user = Customer.objects.get(name=customer)
     orders = Order.objects.filter(customer=user)
+    products = Crop.objects.all()
     for order in orders:
         print(order.__dict__.keys())
     # print(orders)
-    context = {'orders':orders,'user_type':customer.user_type}
+    mylist = zip(orders,products)
+    context = {'orders':orders,'user_type':customer.user_type, 'products':products,"mylist":mylist}
     return render(request, 'sales/myOrders.html',context)
 
 

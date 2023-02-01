@@ -3,18 +3,18 @@
 
 {% if products %}
 {% for product in products  %}
-<div style="margin:20px; border: 2px red solid; padding:20px">
-    <a href="{% url 'productDetail' product.id %}"><h1>{{product.crop_name}}</h1></a>
-   <p>By: {{product.farmer_name}}</p>
-   <p>Stock : {{product.stock}}</p>
-   <p>Price : {{product.cost}} INR per Kg</p>
-</div>
+        <div class="gallary">
+            <div class="content">
+                <a href="{% url 'productDetail' product.id %}"><img src="{{product.image.url}}" alt="{{product.crop_name}}"></a>
+                <h3><a href="{% url 'productDetail' product.id %}"> {{product.crop_name}}</a></h3><br>
+                <h2>Rs. {{product.cost}} /Kg</h2>  <br>
+            </div>
+          </div>
 {% endfor %}
 {% else %}
 
 No products to display currently
 
 {% endif %}
-
 
 {% endblock content %}

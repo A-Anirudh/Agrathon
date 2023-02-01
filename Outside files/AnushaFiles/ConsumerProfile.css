@@ -1,0 +1,152 @@
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .4% 10%;
+
+}
+#label-name{
+  margin-top: 11%;
+}
+img{
+  margin-top: 5%;
+}
+
+.logo {
+  position: relative;
+  width: 10vh;
+  height: 5vh;
+  
+}
+ 
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  box-sizing: border-box;
+  background: #dbf76b;
+}
+
+#Search_box{
+  box-sizing: border-box;
+  width: 100vh;
+  height: 5vh;
+  left: 261px;
+  top: 27px;
+
+  font-size: 2vh;
+  line-height: 100%;
+
+  background: #E0DEDE;
+  border: .3px solid #000000;
+  border-radius: 35px;
+  /* identical to box height */
+  text-align: center;
+}
+.s_icon{
+ 
+  width: 5vh;
+  height: 5vh;
+ 
+}
+.prof{   
+  position: relative; 
+  width: 5vh;
+  height: 5vh;
+  align-self: flex-end;
+  border: 0;
+}
+
+.searchflex{
+display: flex;
+justify-content: space-evenly;
+}		
+		body {
+			background-color:#fff;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		
+		#form {
+			background-color: #CDEDFF;
+			max-width: 450px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+      border-radius: 17px;
+      height: 880px;
+    }
+
+		
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 402px;
+		}
+
+		
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: 402px;
+		}
+
+		
+		button {
+			background-color: #FFFFF0;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 15px;
+			display: block;
+			
+			margin-top: 30px;
+			margin-bottom: 10px;
+            width: 200px;
+            height: 40px;
+            left: 517px;
+            top: 858px;
+            border-radius: 5px;
+		}

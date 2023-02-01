@@ -2,9 +2,9 @@
 {% endblock title %} {%block content %}
 
         <div class="fcontainer">
-            {% for order in orders %}
+            {% for order,product in mylist %}
             <div class="a">
-                <img src="{{order.crop.image.url}}">
+                <img src="{{order.crop.image.url}}" class="customerOrdersImage">
                 <div class="info">
                     <div class="name">
                         <p class="b">Name : {{order.crop.crop_name}}</p>
@@ -20,7 +20,7 @@
                         {% endif %}
 
                     </div>
-                    <a href="#" class="click">View Details</a>
+                    <a href="{% url 'productDetail' product.id %}" class="click">View Details</a>
                 </div>
             </div>
             {% endfor %}
