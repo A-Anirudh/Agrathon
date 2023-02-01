@@ -1,9 +1,44 @@
 {% extends 'sales/base_file.html' %} {% block title %} Product detail page 
 {% endblock title %} {%block content %}
-<h1>Product detail page</h1>
+
 
 {% if product %}
-{{product}}
+
+    <div class="info_box">
+        <div class="name_price"><h1>{{product.crop_name}}<h1/>
+            <h1>M.R.P : Rs {{product.cost}}/KG</h1>
+        </div>
+
+        <div>
+            <p>Free Delivery</p>
+            <p>F2C Approved</p>
+        </div>
+
+        <div>
+            <p>Diet Type : Vegetarian</p>
+            <p>Number of items : 1</p>
+
+        </div>
+
+        <div class="aboout">
+            <h2>Details</h2>
+            <p>
+{{product.desc}} </p>
+        </div>
+
+
+    </div>
+
+    <form class="image_box">
+
+        <img src="{{product.image.url}}">
+        
+        <div class="options_flex">
+
+        <button type="submit" class="add_to_cart">Add to Cart</button>
+        <button type="submit" class="buy_now">Buy now</button>
+        </div>
+    </form>
 
 {% else %}
 <p>Error from our side.. Will fix it soon!</p>

@@ -15,7 +15,7 @@ body {
     background: #FFE08C;
 }
 
-.container {
+.main_container {
     position: fixed;
     margin: auto;
     top: 12%;

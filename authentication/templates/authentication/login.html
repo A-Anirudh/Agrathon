@@ -8,40 +8,18 @@
 {% endif %}
 
 {% block content %}
-<div class="box1"></div>
-<div class="box2"></div>
-    <form method="POST" class="main_container">
+
+    <form method="POST" class="container">
       {% csrf_token %}
-
-        <div class="imageBox" >
-            <img src="login_image_upscaled.png">
-            <div class="hiflex">
-            <p class="hey">Hey!</p>
-           <h1>Welcome</h1>
-        </div>
-        </div>
-
-
-        <div class="content">
-
-            <div><h2>Login</h2></div>
-
-            <div class='entryFlex'>
-
-            <div class="entry">
-                <p>Username/Email</p>
-                {{form.username}}
-            
-            <div class="entry_2"><p>Password</p>
-            {{form.password}}
-    </div>
-
-       <div class="loginButton" >        <input type="submit" value="Login" class='login'></div>
-        <a href="forgot_password.html" class="forgotpwd">Forgot Password</a>
- 
-        <a href="register.html" class="register">New User?Create account</a>
+        <h1>Login</h1>
+        <label for="username"><b>Username</b></label>
+        {{form.username}}
+        <label for="pwd"><b>Password</b></label>
+        {{form.password}}
+        <input type="submit" class="signinbtn" value="Login">
+        <a href="{%url 'new_user'%}" class="register">New User? Create account</a>
         </div>
     </div>
     </form>
-<a href="{% url 'new_user' %}">New User? Sign up</a>
+
 {% endblock content %}

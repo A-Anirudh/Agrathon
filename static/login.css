@@ -3,205 +3,76 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     position: relative;
+
+
+
+
 }
 
 body {
+
     overflow: hidden;
     background: #FFE08C;
 }
 
 .main_container {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    margin: auto;
+    top: 12%;
+    left: 35%;
+    bottom: 12%;
 
-    width: 50%;
-    height: 80%;
+    height: 60%;
+
+    font-size: 1.2vw;
     display: flex;
-
+    flex-direction: column;
     border-width: 2px;
-    border-color: black;
     background: #ffffff;
     box-shadow: 0px 14px 11px -2px rgba(0, 0, 0, 0.22);
     border-radius: 54px;
+    text-align: center;
+    width: 30vw;
 
-
+    justify-content: center;
+    gap: 3vh;
 }
 
-.imageBox {
-    position: relative;
-    top: 0%;
-    left: 0%;
-    width: 50%;
-    height: 100%;
-
-
-}
-
-.imageBox img {
-    position: relative;
-    top: 0%;
-    left: 0%;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 54px 0px 0px 54px;
-
-
-}
-
-.hey {
-    /* position: absolute;
-    top: 35%;
-    left: 20%; */
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 65px;
-    line-height: 98px;
-    /* identical to box height */
-
-    text-transform: capitalize;
-
-    color: #223D00;
-}
-
-
-.hiflex {
-    /* background-color: #c6aeff; */
-    top: 35%;
-    left: 20%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-}
-
-h1 {
-    /* position: absolute;
-
-    
-    top: 45%;
-    left: 20%; */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1;
-    /* font-size: 400%; */
-    font-size: 3.55vw;
-    line-height: 98px;
-    /* identical to box height */
-
-    text-transform: capitalize;
-
-    color: #223D00;
-}
-
-
-.content {
-    position: relative;
-    top: 10%;
-    right: 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: #5aa2ff; */
-    width: 50%;
-    height: 80%;
-    justify-content: space-between;
-
-
-
-
-
-}
-
-h2 {
-
-    font-family: 'Lexend Deca';
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 44px;
-    text-transform: capitalize;
-
-    color: #000000;
-}
-
-
-.textbox {
-    width: 100%;
-    height: 150%;
+.username-textbox {
+    left: 17%;
     border: 0;
+    height: 6vh;
+    width: 20vw;
+    text-align: center;
+
+    font-size: 1.0vw;
+
     background: #D9D9D9;
     border-radius: 8px;
+}
+
+
+.password-textbox {
+    left: 17%;
+    border: 0;
+    height: 6vh;
+    width: 20vw;
     text-align: center;
+    font-size: 1.0vw;
+    background: #D9D9D9;
+    border-radius: 8px;
 }
 
-.entryFlex {
-    /*  
-    background: #ff2020; */
-    /* position: relative; */
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    height: 45%;
-    justify-content: space-around;
-
-
-}
-
-.login {
-    padding: 10px 45px;
-    /* min-width: 10.25%; */
-    text-decoration: none;
+.signinbtn {
+    border: 0;
+    min-width: 5vh;
+    text-align: center;
+    width: 7vw;
+    min-width: 5vw;
+    padding: 2%;
     background: linear-gradient(270deg, rgba(158, 255, 0, 0.61) 0%, rgba(0, 255, 112, 0.61) 105.71%);
-    border-radius: 26px;
-    width: 140px;
-    height: 52px;
-    color: #000000;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
-}
-
-.register {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
-    color: #000000;
-    text-decoration: none;
-}
-
-.box1 {
-
-    position: absolute;
-    top: 10%;
-    right: 100%;
-    width: 23%;
-    height: 44%;
-    top: 8%;
-    left: 24%;
-    ;
-    background: #518B10;
-    border-radius: 55px;
-
-}
-
-.box2 {
-    position: absolute;
-    width: 23%;
-    height: 44%;
-    top: 48%;
-    left: 53%;
-    ;
-
-    background: #FFCD46;
-    border-radius: 55px;
+    border-radius: 50px;
+    font-size: 1.3vw;
+    margin-left: auto;
+    margin-right: auto;
 }

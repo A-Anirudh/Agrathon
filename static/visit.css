@@ -70,7 +70,7 @@ nav {
 .textBox h1 {
 
     font-family: 'Poppins';
-    font-style: normal;
+
     font-weight: 600;
     font-size: 100px;
     line-height: 105px;
@@ -81,30 +81,27 @@ nav {
 
 .textBox p {
     font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    text-transform: capitalize;
 
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-align: center;
+    margin: 1rem;
     color: #1E3600;
 }
 
 .readmoreButton {
-
-
     padding-left: 20px;
     padding-right: 20px;
     min-width: 10.25%;
-    padding: auto;
+    /* padding: auto; */
     height: 53px;
     background-color: rgba(125, 128, 7, 0.36);
     border-radius: 26.5px;
 
 
     font-family: 'Poppins';
-    font-style: normal;
+
     font-weight: 100;
     font-size: 20px;
     line-height: 30px;
@@ -155,9 +152,12 @@ header {
 }
 
 .logo {
-    /*position: relative;*/
+    position: relative;
     width: 10vh;
     height: 5vh;
+    margin: 0;
+    margin-right: 1rem;
+    padding: 0;
 }
 
 .nav__links {
@@ -206,6 +206,8 @@ header {
 .s_icon {
     width: 5vh;
     height: 5vh;
+    margin: 0;
+    padding: 0;
 }
 
 .prof {
@@ -214,6 +216,7 @@ header {
     height: 5vh;
     align-self: flex-end;
     border: 0;
+    margin: 0;
 }
 
 .searchflex {
@@ -226,11 +229,14 @@ header {
     display: inline;
     width: 3vh;
     height: 3vh;
+    margin: 0;
+    padding: 0;
 }
 
 .c {
     display: flex;
     align-content: center;
+    flex-direction: row;
 }
 
 /* MyOrders.css */
@@ -455,4 +461,130 @@ h2 {
     padding: 10px 10px;
     border-radius: 35px;
     margin: 5px;
+}
+
+
+/* Product details page */
+
+
+
+.image_box {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+    align-items: center;
+    gap: 3%;
+
+}
+
+.info_box {
+    position: absolute;
+    right: 0%;
+    width: 50vw;
+    height: 100vh;
+    /* background-color: aqua; */
+}
+
+img {
+    padding-top: 20%;
+    height: 65vh;
+    width: 30vw;
+}
+
+.options_flex {
+    display: flex;
+    width: 30vw;
+    /* background-color: blueviolet; */
+    justify-content: space-evenly;
+}
+
+.add_to_cart {
+
+    background: #CEF046;
+    border: 0;
+    border-radius: 25px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 27px;
+    padding: 3% 3%;
+
+    text-align: center;
+    text-transform: capitalize;
+    height: 6vh;
+    width: 14vw;
+    color: #000000;
+
+}
+
+.buy_now {
+    background: #6FAE29;
+    border: 0;
+    border-radius: 25px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 27px;
+    padding: 3% 6%;
+
+    text-align: center;
+    text-transform: capitalize;
+    height: 6vh;
+    width: 14vw;
+    color: #000000;
+}
+
+.buy_now:hover {
+    border: 0.15vw solid #6FAE29;
+    background-color: #ffffff;
+
+}
+
+.add_to_cart:hover {
+    border: 0.15vw solid #CEF046;
+    background-color: #ffffff;
+}
+
+.info_box {
+    padding-top: 10%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%
+}
+
+p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 20%;
+    font-size: 1.1vw;
+    line-height: auto;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    font-style: bold;
+    font-weight: 1.2vw;
+    font-size: 2.5vw;
+    line-height: auto;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+h2 {
+    font-family: 'Montserrat';
+    font-style: bold;
+    font-weight: 1.2vw;
+    font-size: 2vw;
+    line-height: auto;
+    text-transform: uppercase;
+
+    color: #000000;
 }
