@@ -7,6 +7,7 @@ from geopy.distance import geodesic
 from .helpers import get_lat_and_lon
 from authentication.models import CustomUser
 from .forms import AddToCartForm
+
 def home(request):
     return HttpResponse("Hello world")
 
