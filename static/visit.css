@@ -700,3 +700,79 @@ h2 {
     border-left: 2px solid rgba(0, 0, 0, 0.2);
     border-right: 2px solid rgba(0, 0, 0, 0.2);
 }
+
+
+
+/* Farmer orders page */
+
+.bigBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 68%;
+    height: 30vh;
+    margin-top: 5%;
+    box-sizing: border-box;
+    align-items: center;
+    margin-left: 15%;
+    /* margin-right: %; */
+    border-radius: 35px;
+    border: 2px solid #000000;
+    justify-content: space-between;
+}
+
+.imageOrders {
+    width: 293px;
+    height: 230px;
+    border-radius: 20%;
+    padding: 2%;
+    margin-left: 2%;
+}
+
+.detailFarmer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+    margin-bottom: 1%;
+    margin-top: -30%;
+
+}
+
+.infoOrder {
+    display: flex;
+    width: 39%;
+    height: 25%;
+    margin-top: -36%;
+    margin-left: 5%;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.p1 {
+    margin-bottom: 25%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: black;
+}
+
+.p2 {
+    width: 455px;
+    margin-top: 32%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.p3 {
+    width: 455px;
+    margin-top: 32%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+}

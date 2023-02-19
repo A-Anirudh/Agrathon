@@ -1,0 +1,21 @@
+{% extends 'sales/base_file.html' %}
+
+{% block content %}
+
+{% for order in orders %}
+
+    <div class="bigBox">
+        <img src="{{order.crop.image.url}}" class="imageOrders">
+        <div class="detailOrder">
+            <p class="p1">{{order.crop.crop_name}}</p>
+            <div class="infoOrder">
+                <p class="p2">qty :<br>From:<br>Total:</p>
+                <p class="p3">{{order.qty}} kgs<br>{{order.customer.name}}<br>Rs. {{total_cost}}</p>
+            </div>
+        </div>          
+    </div>
+
+{% endfor %}
+
+
+{% endblock content %}

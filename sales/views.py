@@ -6,7 +6,7 @@ import requests
 from geopy.distance import geodesic
 from .helpers import get_lat_and_lon
 from authentication.models import CustomUser
-from .forms import AddToCartForm
+from .forms import AddToCartForm, CustomerUpdateForm, FarmerUpdateForm
 
 def home(request):
     return HttpResponse("Hello world")
@@ -93,11 +93,22 @@ def myOrders(request):
 
 # All orders of a particular farmer
 def farmerOrders(request):
-    user = CustomerUser.objects.get(username=request.user)
-    farmer = Farmer.objects.get(farmer_name=user)
+    user = CustomUser.objects.get(username=request.user)
+    farmer = Farmer.objects.get(name=user)
     orders = Order.objects.filter(farmer=farmer)
-    return render(request,'sales/farmerOrders.html')
+    total_cost = 0
 
+    for i in orders:
+        total_cost += (i.crop.cost*i.qty)
+    print(total_cost)
+
+    context = {
+        "orders":orders,
+        "user_type":user.user_type,
+        'total_cost':total_cost
+
+    }
+    return render(request,'sales/farmerOrders.html',context)
 
 # Cart 
 def cart(request):
@@ -109,6 +120,33 @@ def cart(request):
     for i in cart_items:
         p.append(Crop.objects.get(crop_name=i.product.crop_name))
 
-    print(p)
     context = {'cart':cart_items,'user_type':user.user_type,"product":p,"mylist":zip(cart_items,p) }
     return render(request, 'sales/cart.html',context)
+
+# Profile related code
+def CustomerProfile(request,username):
+
+    if request.method=="POST":
+        c_form = CustomerUpdateForm(request.POST, instance=request.user)
+
+        if c_form.is_valid():
+            c_form.save()
+            return redirect('CustomerProfile',username=username)
+    else:
+        c_form = CustomerUpdateForm(instance=request.user)
+    context = {
+        'c_form':c_form,
+    }
+    return render(request, 'sales/customerProfile.html')
+
+
+def orderConfirm(request):
+    user = CustomUser.objects.get(username=request.user)
+    customer = Customer.objects.get(name = user)
+    cart_items = Cart.objects.filter(user = customer)
+    for i in cart_items:
+        new_order = Order.objects.create(customer=customer,farmer=i.product.farmer_name,crop=i.product,qty=i.qty,total_price=i.total_cost)
+        i.delete()
+        new_order.save()
+
+    return render(request, 'sales/orderConfirm.html')

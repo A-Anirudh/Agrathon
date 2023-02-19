@@ -8,6 +8,5 @@ class CustomUser(AbstractUser):
     )
     user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES,blank=True,null=True)
 
-
     def __str__(self):
       return self.username

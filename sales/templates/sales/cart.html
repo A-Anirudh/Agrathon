@@ -19,8 +19,8 @@
 
         </div>
         <div class="bottom">
-            <h2> Total Rs {{ item.total_cost }}</h2>
-            <h3><a href="payment.html" id="buy">Proceed to buy</a></h3>
+            <h2> Total Rs {{ item.product.cost }}</h2>
+            <h3><a href="{% url 'orderConfirm' %}" id="buy">Proceed to buy</a></h3>
         </div>
 
         {% endblock content %}

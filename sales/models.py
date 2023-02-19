@@ -36,7 +36,6 @@ class Order(models.Model):
     qty = models.IntegerField()
     # Order ID is the built in ID in django models
     order_date = models.DateTimeField(auto_now=False, auto_now_add=True)
-    order_date = models.DateTimeField(auto_now=False, auto_now_add=True)
     deliver_date = models.DateTimeField(auto_now=False, auto_now_add=True)
     delivered = models.BooleanField(default=False)
     total_price = models.FloatField(default=0,blank=True,null=True)
